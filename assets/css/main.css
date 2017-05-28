@@ -54,7 +54,31 @@
   content: "\f041"; }
 
 /*h3's for book and bilder sections*/
-section#booker h3, section#prints h3, section#follow h3 {
+section#booker h3, section#prints h3, section#follow h3, section#contact-form h3, section#contact-form form input::-webkit-input-placeholder, section#contact-form form textarea::-webkit-input-placeholder {
+  font-size: 30px;
+  font-family: 'Leto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2c3e50;
+  letter-spacing: 2px;
+  margin: 20px 0 0 0; }
+section#booker h3, section#prints h3, section#follow h3, section#contact-form h3, section#contact-form form input::-moz-placeholder, section#contact-form form textarea::-moz-placeholder {
+  font-size: 30px;
+  font-family: 'Leto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2c3e50;
+  letter-spacing: 2px;
+  margin: 20px 0 0 0; }
+section#booker h3, section#prints h3, section#follow h3, section#contact-form h3, section#contact-form form input:-ms-input-placeholder, section#contact-form form textarea:-ms-input-placeholder {
+  font-size: 30px;
+  font-family: 'Leto', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2c3e50;
+  letter-spacing: 2px;
+  margin: 20px 0 0 0; }
+section#booker h3, section#prints h3, section#follow h3, section#contact-form h3, section#contact-form form input::placeholder, section#contact-form form textarea::placeholder {
   font-size: 30px;
   font-family: 'Leto', sans-serif;
   font-weight: 700;
@@ -472,6 +496,8 @@ section#booker .book-wrapper {
     max-height: 220px; } }
 
 @media screen and (max-width: 768px) {
+  section#booker .paraf {
+    max-width: 80%; }
   section#booker .book-wrapper {
     -ms-flex-direction: column;
         flex-direction: column; }
@@ -515,6 +541,8 @@ section#prints .prints-wrapper {
     max-height: 220px; } }
 
 @media screen and (max-width: 768px) {
+  section#prints .paraf {
+    max-width: 80%; }
   section#prints .prints-wrapper {
     -ms-flex-direction: column;
         flex-direction: column; }
@@ -583,6 +611,76 @@ section#follow {
       opacity: 1;
       -webkit-transform: translateX(0px);
               transform: translateX(0px); }
+
+section#contact-form {
+  max-width: 100%; }
+  section#contact-form h3 {
+    text-align: center;
+    padding: 70px 0; }
+  section#contact-form form {
+    max-width: 500px;
+    margin: 0 auto 70px;
+    transition: all 0.3s ease-in-out; }
+    section#contact-form form input, section#contact-form form textarea {
+      border: 3px solid #222533;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 15px; }
+    section#contact-form form input::-webkit-input-placeholder {
+      font-size: 12px;
+      text-transform: none; }
+    section#contact-form form input::-moz-placeholder {
+      font-size: 12px;
+      text-transform: none; }
+    section#contact-form form input:-ms-input-placeholder {
+      font-size: 12px;
+      text-transform: none; }
+    section#contact-form form input::placeholder {
+      font-size: 12px;
+      text-transform: none; }
+    section#contact-form form .submit-wrap {
+      text-align: right; }
+      section#contact-form form .submit-wrap [type="submit"] {
+        color: white;
+        background: #222533;
+        font-size: 18px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 40%; }
+    section#contact-form form textarea {
+      height: 10em; }
+      section#contact-form form textarea:focus {
+        outline: none;
+        border-color: #e1c182; }
+      section#contact-form form textarea::-webkit-input-placeholder {
+        font-size: 12px;
+        text-transform: none; }
+      section#contact-form form textarea::-moz-placeholder {
+        font-size: 12px;
+        text-transform: none; }
+      section#contact-form form textarea:-ms-input-placeholder {
+        font-size: 12px;
+        text-transform: none; }
+      section#contact-form form textarea::placeholder {
+        font-size: 12px;
+        text-transform: none; }
+    section#contact-form form .contact-info-group label {
+      width: 50%;
+      float: left;
+      box-sizing: border-box; }
+      section#contact-form form .contact-info-group label:nth-child(1) {
+        padding-right: 5px; }
+    section#contact-form form label {
+      display: block;
+      margin-bottom: 20px; }
+      section#contact-form form label span {
+        display: block; }
+  @media screen and (max-width: 500px) {
+    section#contact-form form {
+      max-width: 90%; }
+      section#contact-form form .submit-wrap {
+        text-align: center; } }
 
 /*footer design with copyright text and mini navigation*/
 footer {
