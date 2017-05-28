@@ -22,19 +22,32 @@
             display: flex
             justify-content: space-around
             align-items: center
-            .logo,nav
+            .logo, .logo-dark, nav
                 margin-top: 30px
             
                 
             /*logo design*/
-            .logo
+            .logo, .logo-dark
                 width: 197px
                 height: 96px
+                cursor: pointer
+            .logo
                 background:
                     image: url("/assets/img/logo.png")
                     size: contain
                     repeat: no-repeat
-                cursor: pointer
+                &.is-open
+                    display: none 
+
+            .logo-dark
+                background:
+                    image: url("/assets/img/logo-dark.png")
+                    size: contain
+                    repeat: no-repeat
+                display: none
+                &.is-open
+                    display: block
+                    z-index: 3
 
                 
             /*navigation design */
@@ -81,13 +94,16 @@
                 span:before
                     top: 15px
                 span:after
-                    top: -17px
+                    top: -17px 
+                    
                 &.is-open span
                     background: transparent
+                    z-index: 3
                 &.is-open span:before,
                 &.is-open  span:after
                     transform-origin: center
                     transform: rotate(45deg)
+                    background: $h3-text-color
                     top: 0
                 &.is-open  span:after
                     transform: rotate(-45deg)
@@ -166,7 +182,8 @@
         z-index: 3
         width: 100%
         background: rgba(white, .8)
-        margin: 110px 0 0 0
+        margin: 0 0 0 0
+        padding-top: 110px
         transition: all 0.3s ease-in-out
         transform: translateY(-120%)
         
@@ -240,7 +257,7 @@
         header#header
             .header-wrapper
                 padding: 0 0 20px 0
-                .logo 
+                .logo, .logo-dark
                     width: 157px
                     padding-top: 10px
                 nav
@@ -316,7 +333,7 @@
         header#header
             height: 600px
             .header-wrapper 
-                .logo
+                .logo, .logo-dark
                     width: 132px
                 .mobile-nav-toggle 
                     margin-top: 0px
@@ -362,7 +379,7 @@
             .header-wrapper
                 justify-content: space-between
                 padding: 0px 10px 0 10px
-                .logo
+                .logo, .logo-dark 
                     width: 120px
                  
             .ctas 

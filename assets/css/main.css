@@ -183,15 +183,26 @@ body {
       /*logo design*/
       /*navigation design */
       /*burger for navigation that contains litle animation when user click on it*/ }
-      .home-wrap header#header .header-wrapper .logo, .home-wrap header#header .header-wrapper nav {
+      .home-wrap header#header .header-wrapper .logo, .home-wrap header#header .header-wrapper .logo-dark, .home-wrap header#header .header-wrapper nav {
         margin-top: 30px; }
-      .home-wrap header#header .header-wrapper .logo {
+      .home-wrap header#header .header-wrapper .logo, .home-wrap header#header .header-wrapper .logo-dark {
         width: 197px;
         height: 96px;
+        cursor: pointer; }
+      .home-wrap header#header .header-wrapper .logo {
         background-image: url("/assets/img/logo.png");
         background-size: contain;
+        background-repeat: no-repeat; }
+        .home-wrap header#header .header-wrapper .logo.is-open {
+          display: none; }
+      .home-wrap header#header .header-wrapper .logo-dark {
+        background-image: url("/assets/img/logo-dark.png");
+        background-size: contain;
         background-repeat: no-repeat;
-        cursor: pointer; }
+        display: none; }
+        .home-wrap header#header .header-wrapper .logo-dark.is-open {
+          display: block;
+          z-index: 3; }
       .home-wrap header#header .header-wrapper nav {
         display: -ms-flexbox;
         display: flex; }
@@ -236,13 +247,15 @@ body {
         .home-wrap header#header .header-wrapper .mobile-nav-toggle span:after {
           top: -17px; }
         .home-wrap header#header .header-wrapper .mobile-nav-toggle.is-open span {
-          background: transparent; }
+          background: transparent;
+          z-index: 3; }
         .home-wrap header#header .header-wrapper .mobile-nav-toggle.is-open span:before,
         .home-wrap header#header .header-wrapper .mobile-nav-toggle.is-open span:after {
           -webkit-transform-origin: center;
                   transform-origin: center;
           -webkit-transform: rotate(45deg);
                   transform: rotate(45deg);
+          background: #2c3e50;
           top: 0; }
         .home-wrap header#header .header-wrapper .mobile-nav-toggle.is-open span:after {
           -webkit-transform: rotate(-45deg);
@@ -307,7 +320,8 @@ body {
     z-index: 3;
     width: 100%;
     background: rgba(255, 255, 255, 0.8);
-    margin: 110px 0 0 0;
+    margin: 0 0 0 0;
+    padding-top: 110px;
     transition: all 0.3s ease-in-out;
     -webkit-transform: translateY(-120%);
             transform: translateY(-120%);
@@ -365,7 +379,7 @@ body {
   @media screen and (max-width: 1366px) {
     .home-wrap header#header .header-wrapper {
       padding: 0 0 20px 0; }
-      .home-wrap header#header .header-wrapper .logo {
+      .home-wrap header#header .header-wrapper .logo, .home-wrap header#header .header-wrapper .logo-dark {
         width: 157px;
         padding-top: 10px; }
       .home-wrap header#header .header-wrapper nav a {
@@ -420,7 +434,7 @@ body {
   @media screen and (max-width: 468px) {
     .home-wrap header#header {
       height: 600px; }
-      .home-wrap header#header .header-wrapper .logo {
+      .home-wrap header#header .header-wrapper .logo, .home-wrap header#header .header-wrapper .logo-dark {
         width: 132px; }
       .home-wrap header#header .header-wrapper .mobile-nav-toggle {
         margin-top: 0px; } }
@@ -462,7 +476,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
         padding: 0px 10px 0 10px; }
-        .home-wrap header#header .header-wrapper .logo {
+        .home-wrap header#header .header-wrapper .logo, .home-wrap header#header .header-wrapper .logo-dark {
           width: 120px; }
       .home-wrap header#header .ctas .buy {
         margin-bottom: 10px; } }
